@@ -108,7 +108,7 @@ UPLOAD_DIR=./public/uploads
 For MongoDB Atlas:
 
 ```env
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/unihub?retryWrites=true&w=majority
+MONGODB_URI=<your-mongodb-connection-string>
 ```
 
 ---

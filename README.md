@@ -1,97 +1,119 @@
-# UniHub - University Student Portal & Resource Hub
+# UniHub - University Student Portal and Resource Hub
 
-A complete, production-ready university student portal with role-based authentication, course management, assignment workflows, resource hub, and notifications system.
+UniHub is a complete, production-ready university management system designed to support students and teachers through a single, unified digital platform. The system provides role-based access, course and assignment management, a resource hub, grading, attendance, and notifications.
 
-## 🚀 Features
+---
 
-### For Students
-- ✅ View enrolled courses with progress tracking
-- ✅ Submit assignments with file uploads
-- ✅ View grades and attendance records
-- ✅ Access resource hub (past papers, notes, tutorials)
-- ✅ Receive in-app notifications
-- ✅ Download lecture materials
+## Project Overview
 
-### For Teachers
-- ✅ Create and manage courses
-- ✅ Upload lecture materials
-- ✅ Create assignments with due dates
-- ✅ Grade student submissions with feedback
-- ✅ Mark attendance
-- ✅ Post announcements
-- ✅ View all student submissions
+The UniHub University Portal aims to streamline academic workflows commonly found in higher education institutions. It centralizes essential academic operations such as course management, assignment submission and grading, attendance tracking, and resource sharing into one integrated web-based application.
 
-### Technical Features
-- 🔐 JWT-based authentication
-- 🎨 Responsive design matching prototype
-- 📁 File upload/download system
-- 🔔 Real-time notifications
-- 📊 Progress tracking
-- 🎯 Role-based access control
+---
 
-## 📋 Tech Stack
+## Key Features
 
-- **Frontend**: Next.js 14 (App Router), TypeScript, CSS Modules
-- **Backend**: Next.js API Routes
-- **Database**: MongoDB with Mongoose
-- **Authentication**: JWT + bcrypt
-- **File Storage**: Local filesystem (upgradeable to cloud)
+### Student Features
 
-## 🛠️ Installation & Setup
+* View enrolled courses and track progress
+* Submit assignments with file uploads
+* View grades and attendance records
+* Access shared academic resources such as notes and past papers
+* Receive system notifications
+* Download lecture materials
 
-### Prerequisites
-- Node.js 18+ installed
+### Teacher Features
 
-## 🚀 Quick Start (Demo Mode)
-If you just want to run the project to see the UI and features without setting up a database:
+* Create and manage courses
+* Upload lecture materials
+* Create and manage assignments with due dates
+* View and grade student submissions with feedback
+* Mark student attendance
+* Post announcements for enrolled students
 
-1. **Unzip the project**
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-3. **Run the development server**:
-   ```bash
-   npm run dev
-   ```
-4. **Login with demo accounts**:
-   - **Teacher**: `sarah.malik@university.edu` / `teacher123`
-   - **Student**: `student01@university.edu` / `student123`
+### System Features
 
-*Note: In this mode, data is saved to your browser's local storage. If you clear your cache or use a different browser, data will reset.*
+* Role-based authentication and authorization
+* Secure login using JWT
+* Responsive user interface
+* File upload and download functionality
+* Notification system
+* Modular and scalable architecture
 
-## 🛠️ Full Installation (With Database)
-For a complete production setup with MongoDB:
+---
+
+## Technology Stack
+
+* Frontend: Next.js 14 (App Router), TypeScript, CSS Modules
+* Backend: Next.js API Routes
+* Database: MongoDB with Mongoose
+* Authentication: JSON Web Tokens (JWT) with bcrypt
+* File Storage: Local filesystem (extendable to cloud storage)
+
+---
+
+## Installation and Setup
 
 ### Prerequisites
-- Node.js 18+ installed
-- MongoDB installed and running locally OR MongoDB Atlas account
 
-### Step 1: Clone and Install
+* Node.js version 18 or higher
+* MongoDB (local installation or MongoDB Atlas)
+
+---
+
+## Quick Start (Demo Mode)
+
+This mode allows you to run the application without setting up a database.
+
+1. Install dependencies:
 
 ```bash
-cd exo-perseverance
 npm install
 ```
 
-### Step 2: Environment Setup
+2. Start the development server:
 
-Create `.env.local` file in the root directory:
+```bash
+npm run dev
+```
+
+3. Access the application at:
+
+```
+http://localhost:3000
+```
+
+### Demo Credentials
+
+* Teacher: [sarah.malik@university.edu](mailto:sarah.malik@university.edu) / teacher123
+* Student: [student01@university.edu](mailto:student01@university.edu) / student123
+
+Note: Demo mode stores data in the browser's local storage and resets when the cache is cleared.
+
+---
+
+## Full Installation (With Database)
+
+### Environment Configuration
+
+Create a file named `.env.local` in the root directory:
 
 ```env
 MONGODB_URI=mongodb://localhost:27017/unihub
-JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+JWT_SECRET=replace-with-a-secure-secret
 NEXT_PUBLIC_API_URL=http://localhost:3000
 MAX_FILE_SIZE=10485760
 UPLOAD_DIR=./public/uploads
 ```
 
-**For MongoDB Atlas:**
+For MongoDB Atlas:
+
 ```env
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/unihub?retryWrites=true&w=majority
 ```
 
-### Step 3: Create Upload Directories
+---
+
+### Create Upload Directories
 
 ```bash
 mkdir -p public/uploads/lectures
@@ -100,227 +122,98 @@ mkdir -p public/uploads/submissions
 mkdir -p public/uploads/resources
 ```
 
-### Step 4: Start Development Server
+---
+
+### Run the Application
 
 ```bash
 npm run dev
 ```
 
-Visit `http://localhost:3000` - you'll be redirected to the login page.
+---
 
-## 👥 Creating Test Users
-
-Since there's no registration page UI yet, you can create users via API:
-
-### Create a Student Account
-
-```bash
-curl -X POST http://localhost:3000/api/auth/register \
-  -H "Content-Type: application/json" \
-  -d '{
-    "email": "student@university.edu",
-    "password": "password123",
-    "role": "student",
-    "firstName": "John",
-    "lastName": "Doe",
-    "studentId": "STU001"
-  }'
-```
-
-### Create a Teacher Account
-
-```bash
-curl -X POST http://localhost:3000/api/auth/register \
-  -H "Content-Type: application/json" \
-  -d '{
-    "email": "teacher@university.edu",
-    "password": "password123",
-    "role": "teacher",
-    "firstName": "Dr. Jane",
-    "lastName": "Smith",
-    "employeeId": "EMP001"
-  }'
-```
-
-## 🎯 Usage Guide
-
-### Login
-1. Go to `/login`
-2. Enter email and password
-3. Select role (Student or Teacher)
-4. Click "Login as Student/Teacher"
+## User Workflows
 
 ### Student Workflow
-1. **Dashboard** - View announcements and quick links
-2. **Courses** - See enrolled courses with progress
-3. **Assignments** - View pending/completed assignments
-4. **Submit Assignment** - Upload files before due date
-5. **Grades** - Check graded assignments
-6. **Resources** - Search and download study materials
+
+1. Log in as a student
+2. View dashboard announcements
+3. Access enrolled courses
+4. Submit assignments before deadlines
+5. View grades and attendance
+6. Download learning resources
 
 ### Teacher Workflow
-1. **Dashboard** - Overview of courses
-2. **Create Course** - Add new course with code, name, schedule
-3. **Upload Lecture** - Add materials for students
-4. **Create Assignment** - Set title, description, due date, points
-5. **View Submissions** - See all student submissions
-6. **Grade Assignment** - Provide score and feedback
-7. **Mark Attendance** - Record student attendance
-8. **Post Announcement** - Notify all enrolled students
 
-## 📁 Project Structure
+1. Log in as a teacher
+2. Create and manage courses
+3. Upload lectures and assignments
+4. Review and grade submissions
+5. Mark attendance
+6. Post announcements
+
+---
+
+## Project Structure
 
 ```
 exo-perseverance/
 ├── src/
-│   ├── app/                    # Next.js App Router
-│   │   ├── api/               # API Routes
-│   │   │   ├── auth/          # Authentication
-│   │   │   ├── courses/       # Course management
-│   │   │   ├── assignments/   # Assignment CRUD
-│   │   │   ├── resources/     # Resource hub
-│   │   │   ├── grades/        # Grades
-│   │   │   ├── attendance/    # Attendance
-│   │   │   ├── announcements/ # Announcements
-│   │   │   ├── notifications/ # Notifications
-│   │   │   └── uploads/       # File uploads
-│   │   ├── login/             # Login page
-│   │   ├── student/           # Student pages
-│   │   └── teacher/           # Teacher pages
+│   ├── app/
+│   │   ├── api/
+│   │   ├── login/
+│   │   ├── student/
+│   │   └── teacher/
 │   ├── components/
-│   │   ├── ui/                # Reusable components
-│   │   └── layout/            # Layout components
-│   ├── lib/                   # Utilities
-│   ├── models/                # Mongoose models
-│   └── styles/                # Global styles
+│   ├── lib/
+│   ├── models/
+│   └── styles/
 ├── public/
-│   └── uploads/               # File storage
+│   └── uploads/
 └── package.json
 ```
 
-## 🚀 Deployment
+---
 
-### Deploy to Vercel
+## Deployment
 
-1. **Push to GitHub**
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin <your-repo-url>
-git push -u origin main
-```
+### Deployment on Vercel
 
-2. **Deploy on Vercel**
-   - Go to [vercel.com](https://vercel.com)
-   - Import your GitHub repository
-   - Add environment variables in Vercel dashboard
-   - Deploy!
-
-3. **Set Environment Variables in Vercel**
-   - `MONGODB_URI` - Your MongoDB Atlas connection string
-   - `JWT_SECRET` - Random secret key
-   - `NEXT_PUBLIC_API_URL` - Your Vercel deployment URL
-
-### Deploy to Other Platforms
-
-**Build for production:**
-```bash
-npm run build
-npm start
-```
-
-The app runs on port 3000 by default.
-
-## 🔒 Security Notes
-
-- Change `JWT_SECRET` to a strong random string in production
-- Use MongoDB Atlas with IP whitelisting
-- Enable HTTPS in production
-- Validate file uploads (size, type)
-- Implement rate limiting for API routes
-- Add CORS configuration if needed
-
-## 📝 API Documentation
-
-### Authentication
-- `POST /api/auth/register` - Register new user
-- `POST /api/auth/login` - Login user
-- `GET /api/auth/me` - Get current user
-
-### Courses
-- `GET /api/courses` - List courses (role-filtered)
-- `POST /api/courses` - Create course (teacher only)
-- `GET /api/courses/:id` - Get course details
-- `PUT /api/courses/:id` - Update course (teacher only)
-- `DELETE /api/courses/:id` - Delete course (teacher only)
-
-### Assignments
-- `GET /api/assignments` - List assignments
-- `POST /api/assignments` - Create assignment (teacher only)
-- `POST /api/assignments/:id/submit` - Submit assignment (student only)
-- `GET /api/assignments/:id/submissions` - View submissions (teacher only)
-- `POST /api/assignments/:id/grade` - Grade submission (teacher only)
-
-### Resources
-- `GET /api/resources` - List resources (with search/filter)
-- `POST /api/resources` - Upload resource
-
-### Grades & Attendance
-- `GET /api/grades` - Get grades
-- `GET /api/attendance` - Get attendance
-- `POST /api/attendance` - Mark attendance (teacher only)
-
-### Notifications
-- `GET /api/notifications` - Get user notifications
-- `PUT /api/notifications` - Mark as read
-
-### File Upload
-- `POST /api/uploads` - Upload file
-
-## 🎨 Design System
-
-The application uses a custom design system matching the prototype:
-
-- **Primary Color**: Deep Orange (#E8551E)
-- **Background**: Cream (#FFF8E7)
-- **Accent**: Soft Peach (#FFE5D9)
-- **Fonts**: Poppins (headings), Inter (body)
-
-## 🐛 Troubleshooting
-
-### MongoDB Connection Error
-- Ensure MongoDB is running: `mongod`
-- Check connection string in `.env.local`
-- For Atlas, whitelist your IP address
-
-### File Upload Issues
-- Check upload directories exist
-- Verify file size limits
-- Check file permissions
-
-### Build Errors
-- Clear `.next` folder: `rm -rf .next`
-- Delete `node_modules` and reinstall: `rm -rf node_modules && npm install`
-
-## 📄 License
-
-MIT License - feel free to use this project for your university or educational institution.
-
-## 🤝 Contributing
-
-This is a complete production-ready application. Feel free to extend it with:
-- Email notifications
-- Calendar integration
-- Video lectures
-- Discussion forums
-- Mobile app
-- Analytics dashboard
-
-## 📧 Support
-
-For issues or questions, please open an issue on GitHub.
+1. Push the project to GitHub
+2. Import the repository into Vercel
+3. Configure environment variables
+4. Deploy the application
 
 ---
 
-**Built with ❤️ for universities worldwide**
+## Security Considerations
+
+* Use a strong JWT secret in production
+* Secure database access with authentication and IP whitelisting
+* Validate file uploads
+* Enable HTTPS in production
+
+---
+
+## API Overview
+
+* POST /api/auth/register
+* POST /api/auth/login
+* GET /api/courses
+* POST /api/assignments
+* POST /api/assignments/:id/submit
+* POST /api/assignments/:id/grade
+* GET /api/resources
+* GET /api/notifications
+
+---
+
+## Contribution and Extension
+
+The system can be extended with additional features such as email notifications, calendar integration, discussion forums, analytics dashboards, and mobile application support.
+
+---
+
+## Support
+
+For questions or issues, please use the GitHub issues section of this repository.

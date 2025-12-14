@@ -1,0 +1,179 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.loading {
+    text-align: center;
+    padding: var(--space-12);
+    font-size: var(--text-lg);
+    color: var(--color-gray-medium);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-8);
+}
+
+.title {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--space-2);
+}
+
+.subtitle {
+    font-size: var(--text-base);
+    color: var(--color-gray-medium);
+}
+
+.errorMessage,
+.successMessage {
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-6);
+    font-weight: 500;
+}
+
+.errorMessage {
+    background: #fee;
+    color: #c00;
+    border: 1px solid #fcc;
+}
+
+.successMessage {
+    background: #efe;
+    color: #060;
+    border: 1px solid #cfc;
+}
+
+.formCard {
+    margin-bottom: var(--space-8);
+    padding: var(--space-6);
+}
+
+.formTitle {
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    margin-bottom: var(--space-6);
+}
+
+.formCard form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.select {
+    padding: var(--space-3);
+    border: 1px solid var(--color-gray-light);
+    border-radius: var(--radius-md);
+    font-size: var(--text-base);
+    background: white;
+    cursor: pointer;
+}
+
+.select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.filterSection {
+    margin-bottom: var(--space-6);
+    max-width: 400px;
+}
+
+.assignmentsList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.assignmentCard {
+    padding: var(--space-6);
+}
+
+.assignmentHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-4);
+}
+
+.description {
+    color: var(--color-gray-medium);
+    margin-bottom: var(--space-4);
+    line-height: 1.6;
+}
+
+.assignmentInfo {
+    display: flex;
+    gap: var(--space-6);
+    margin-bottom: var(--space-4);
+    padding: var(--space-3);
+    background: var(--color-accent);
+    border-radius: var(--radius-md);
+    flex-wrap: wrap;
+}
+
+.infoItem {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.infoLabel {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-gray-medium);
+}
+
+.infoValue {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.infoValue.overdue {
+    color: #c00;
+}
+
+.actions {
+    display: flex;
+    gap: var(--space-3);
+}
+
+.emptyState {
+    text-align: center;
+    padding: var(--space-12);
+    color: var(--color-gray-medium);
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .assignmentInfo {
+        flex-direction: column;
+        gap: var(--space-2);
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+}

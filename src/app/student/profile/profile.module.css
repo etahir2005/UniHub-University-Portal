@@ -1,0 +1,211 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    margin-bottom: var(--space-8);
+}
+
+.profileCard {
+    padding: var(--space-8);
+    margin-bottom: var(--space-8);
+}
+
+.profileHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+    margin-bottom: var(--space-6);
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-3xl);
+    font-weight: 700;
+}
+
+.profileInfo {
+    flex: 1;
+}
+
+.name {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+}
+
+.role,
+.studentId,
+.major {
+    font-size: var(--text-base);
+    color: var(--color-gray-medium);
+    margin-bottom: var(--space-1);
+}
+
+.profileDetails {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-accent);
+}
+
+.detailItem {
+    display: flex;
+    gap: var(--space-3);
+}
+
+.detailLabel {
+    font-weight: 600;
+    color: var(--color-gray-medium);
+    min-width: 120px;
+}
+
+.detailValue {
+    color: var(--color-text);
+}
+
+.editForm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-accent);
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+}
+
+.enrollmentCard,
+.progressCard,
+.coursesCard {
+    padding: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+
+.enrollmentGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+}
+
+.enrollmentItem {
+    text-align: center;
+}
+
+.enrollmentLabel {
+    font-size: var(--text-sm);
+    color: var(--color-gray-medium);
+    margin-bottom: var(--space-2);
+}
+
+.enrollmentValue {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.progressSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.progressItem {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.progressHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progressLabel {
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.progressValue {
+    font-size: var(--text-base);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.coursesList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.courseItem {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    background: var(--color-accent);
+    border-radius: var(--radius-md);
+}
+
+.courseCode {
+    font-size: var(--text-base);
+    font-weight: 700;
+    color: var(--color-primary);
+    min-width: 100px;
+}
+
+.courseName {
+    flex: 1;
+    font-size: var(--text-base);
+    font-weight: 500;
+}
+
+.courseGrade {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--color-primary);
+    min-width: 50px;
+    text-align: right;
+}
+
+@media (max-width: 1024px) {
+    .enrollmentGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .profileHeader {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .formRow {
+        grid-template-columns: 1fr;
+    }
+
+    .enrollmentGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .courseItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,30 @@
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.active {
+    background-color: var(--color-success);
+    color: var(--color-white);
+}
+
+.pending {
+    background-color: var(--color-warning);
+    color: var(--color-white);
+}
+
+.completed {
+    background-color: var(--color-info);
+    color: var(--color-white);
+}
+
+.inactive {
+    background-color: var(--color-gray-light);
+    color: var(--color-gray-dark);
+}

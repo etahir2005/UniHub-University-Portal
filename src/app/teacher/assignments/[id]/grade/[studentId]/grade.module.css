@@ -1,0 +1,163 @@
+.container {
+    max-width: 900px;
+}
+
+.header {
+    margin-bottom: var(--space-6);
+}
+
+.submissionCard {
+    margin-bottom: var(--space-6);
+}
+
+.submissionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-4);
+}
+
+.studentName {
+    font-size: var(--text-base);
+    color: var(--color-gray-medium);
+    margin-top: var(--space-1);
+}
+
+.points {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--color-orange);
+    padding: var(--space-2) var(--space-4);
+    background-color: var(--color-peach-light);
+    border-radius: var(--radius-md);
+}
+
+.submissionInfo {
+    display: flex;
+    gap: var(--space-6);
+    padding: var(--space-4);
+    background-color: var(--color-peach-light);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-4);
+}
+
+.infoItem {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.infoLabel {
+    font-size: var(--text-xs);
+    color: var(--color-gray-medium);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.infoValue {
+    font-size: var(--text-base);
+    color: var(--color-black);
+    font-weight: 500;
+}
+
+.files {
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-gray-light);
+}
+
+.files h3 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--color-black);
+    margin-bottom: var(--space-3);
+}
+
+.fileLink {
+    display: block;
+    padding: var(--space-3);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-light);
+    border-radius: var(--radius-md);
+    color: var(--color-orange);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-2);
+    transition: all var(--transition-fast);
+}
+
+.fileLink:hover {
+    background-color: var(--color-peach-light);
+    border-color: var(--color-orange);
+}
+
+.gradeCard {}
+
+.gradeTitle {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--color-black);
+    margin-bottom: var(--space-5);
+}
+
+.gradeInput {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--space-3);
+}
+
+.percentage {
+    padding: var(--space-3) var(--space-5);
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    border-radius: var(--radius-md);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-5);
+}
+
+.error {
+    margin-top: var(--space-4);
+    padding: var(--space-3);
+    background-color: #FFEBEE;
+    border: 1px solid var(--color-error);
+    border-radius: var(--radius-md);
+    color: var(--color-error);
+    font-size: var(--text-sm);
+}
+
+.actions {
+    display: flex;
+    gap: var(--space-3);
+    justify-content: flex-end;
+    margin-top: var(--space-6);
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    font-size: var(--text-lg);
+    color: var(--color-gray-medium);
+}
+
+@media (max-width: 768px) {
+    .submissionHeader {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+
+    .submissionInfo {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+
+    .gradeInput {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+}

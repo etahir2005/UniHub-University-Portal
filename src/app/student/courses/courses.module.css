@@ -1,0 +1,119 @@
+.container {
+    max-width: 1200px;
+}
+
+.header {
+    margin-bottom: var(--space-8);
+}
+
+.title {
+    font-size: var(--text-3xl);
+    font-weight: 600;
+    color: var(--color-black);
+    margin-bottom: var(--space-2);
+}
+
+.subtitle {
+    font-size: var(--text-base);
+    color: var(--color-gray-medium);
+}
+
+.courseGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--space-6);
+}
+
+.courseCard {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    transition: all var(--transition-base);
+}
+
+.courseCard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.courseHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.courseCode {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-orange);
+    margin-bottom: var(--space-1);
+}
+
+.courseInfo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.infoIcon {
+    font-size: var(--text-base);
+}
+
+.infoText {
+    font-size: var(--text-sm);
+    color: var(--color-gray-dark);
+}
+
+.progressSection {
+    margin-top: var(--space-2);
+}
+
+.progressHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-2);
+}
+
+.progressLabel {
+    font-size: var(--text-sm);
+    color: var(--color-gray-dark);
+}
+
+.progressValue {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-orange);
+}
+
+.viewBtn {
+    width: 100%;
+    margin-top: var(--space-2);
+}
+
+.emptyState {
+    text-align: center;
+    color: var(--color-gray-medium);
+    padding: var(--space-8);
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    font-size: var(--text-lg);
+    color: var(--color-gray-medium);
+}
+
+@media (max-width: 768px) {
+    .courseGrid {
+        grid-template-columns: 1fr;
+    }
+}

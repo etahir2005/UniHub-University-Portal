@@ -1,0 +1,54 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-4) var(--space-6);
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-gray-light);
+}
+
+.tabs {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.tab {
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: var(--color-gray-dark);
+    text-decoration: none;
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-fast);
+}
+
+.tab:hover {
+    background-color: var(--color-peach-light);
+    color: var(--color-orange);
+}
+
+.tab.active {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+}
+
+.actions {
+    display: flex;
+    gap: var(--space-3);
+}
+
+.logoutBtn {
+    padding: var(--space-2) var(--space-4);
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius-lg);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.logoutBtn:hover {
+    background-color: var(--color-orange-hover);
+}

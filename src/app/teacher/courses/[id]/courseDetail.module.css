@@ -1,0 +1,321 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.loading,
+.error {
+    text-align: center;
+    padding: var(--space-12);
+    font-size: var(--text-lg);
+    color: var(--color-gray-medium);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-8);
+    padding-bottom: var(--space-6);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.courseCode {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-2);
+}
+
+.title {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--space-3);
+}
+
+.schedule {
+    font-size: var(--text-base);
+    color: var(--color-gray-medium);
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+
+.statCard {
+    text-align: center;
+    padding: var(--space-6);
+}
+
+.statIcon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-3);
+}
+
+.statValue {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--space-2);
+}
+
+.statLabel {
+    font-size: var(--text-sm);
+    color: var(--color-gray-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.errorMessage,
+.successMessage {
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-6);
+    font-weight: 500;
+}
+
+.errorMessage {
+    background: #fee;
+    color: #c00;
+    border: 1px solid #fcc;
+}
+
+.successMessage {
+    background: #efe;
+    color: #060;
+    border: 1px solid #cfc;
+}
+
+.tabs {
+    display: flex;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+    border-bottom: 2px solid var(--color-accent);
+    overflow-x: auto;
+}
+
+.tab {
+    padding: var(--space-3) var(--space-6);
+    background: none;
+    border: none;
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: var(--color-gray-medium);
+    cursor: pointer;
+    transition: all 0.2s;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+}
+
+.tab:hover {
+    color: var(--color-primary);
+    background: var(--color-accent);
+}
+
+.tabActive {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+.tabContent {
+    margin-top: var(--space-6);
+}
+
+.tabHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-6);
+}
+
+.tabHeader h2 {
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.emptyState {
+    text-align: center;
+    padding: var(--space-12);
+    color: var(--color-gray-medium);
+}
+
+.formCard {
+    margin-bottom: var(--space-6);
+    padding: var(--space-6);
+}
+
+.formCard form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.lecturesList,
+.assignmentsList,
+.studentsList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.lectureCard,
+.assignmentCard,
+.studentCard {
+    padding: var(--space-6);
+}
+
+.lectureCard h3,
+.assignmentCard h3 {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+}
+
+.lectureCard p,
+.assignmentCard p {
+    color: var(--color-gray-medium);
+    margin-bottom: var(--space-3);
+}
+
+.lectureInfo,
+.assignmentInfo {
+    display: flex;
+    gap: var(--space-4);
+    font-size: var(--text-sm);
+    color: var(--color-gray-medium);
+    flex-wrap: wrap;
+}
+
+.studentCard {
+    padding: var(--space-4);
+}
+
+.studentInfo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.studentAvatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: var(--text-lg);
+}
+
+.studentInfo h3 {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-1);
+}
+
+.studentInfo p {
+    font-size: var(--text-sm);
+    color: var(--color-gray-medium);
+    margin: 0;
+}
+
+.studentId {
+    font-size: var(--text-xs) !important;
+    color: var(--color-gray-light) !important;
+}
+
+.attendanceCard {
+    padding: var(--space-6);
+}
+
+.attendanceActions {
+    display: flex;
+    gap: var(--space-3);
+    margin: var(--space-4) 0;
+}
+
+.attendanceList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin: var(--space-4) 0;
+}
+
+.attendanceItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-3);
+    background: var(--color-accent);
+    border-radius: var(--radius-md);
+}
+
+.attendanceToggle {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.attendanceBtn {
+    padding: var(--space-2) var(--space-4);
+    border: 2px solid var(--color-gray-light);
+    background: white;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.attendanceBtn.present {
+    background: #4caf50;
+    color: white;
+    border-color: #4caf50;
+}
+
+.attendanceBtn:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tabs {
+        gap: 0;
+    }
+
+    .tab {
+        padding: var(--space-2) var(--space-4);
+        font-size: var(--text-sm);
+    }
+
+    .tabHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-3);
+    }
+
+    .attendanceActions {
+        flex-direction: column;
+    }
+
+    .attendanceItem {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-2);
+    }
+}

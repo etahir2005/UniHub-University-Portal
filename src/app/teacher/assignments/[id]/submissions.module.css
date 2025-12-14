@@ -1,0 +1,163 @@
+.container {
+  max-width: 1000px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-8);
+}
+
+.title {
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: var(--space-2);
+}
+
+.subtitle {
+  font-size: var(--text-base);
+  color: var(--color-gray-medium);
+}
+
+.stats {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.statItem {
+  text-align: center;
+  padding: var(--space-4);
+  background-color: var(--color-peach-light);
+  border-radius: var(--radius-md);
+  min-width: 120px;
+}
+
+.statValue {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-orange);
+}
+
+.statLabel {
+  font-size: var(--text-sm);
+  color: var(--color-gray-dark);
+  margin-top: var(--space-1);
+}
+
+.submissionsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.submissionCard {
+  transition: all var(--transition-base);
+}
+
+.submissionCard:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.submissionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-4);
+}
+
+.studentId {
+  font-size: var(--text-sm);
+  color: var(--color-gray-medium);
+  margin-top: var(--space-1);
+}
+
+.submissionInfo {
+  display: flex;
+  gap: var(--space-6);
+  padding: var(--space-3);
+  background-color: var(--color-peach-light);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.infoLabel {
+  font-size: var(--text-xs);
+  color: var(--color-gray-medium);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.infoValue {
+  font-size: var(--text-base);
+  color: var(--color-black);
+  font-weight: 500;
+}
+
+.files {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.fileLink {
+  display: inline-block;
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-light);
+  border-radius: var(--radius-md);
+  color: var(--color-orange);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  transition: all var(--transition-fast);
+}
+
+.fileLink:hover {
+  background-color: var(--color-peach-light);
+  border-color: var(--color-orange);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.emptyState {
+  text-align: center;
+  color: var(--color-gray-medium);
+  padding: var(--space-8);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  font-size: var(--text-lg);
+  color: var(--color-gray-medium);
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .stats {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .submissionInfo {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+}

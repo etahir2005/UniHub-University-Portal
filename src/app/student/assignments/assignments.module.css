@@ -1,0 +1,128 @@
+.container {
+    max-width: 1000px;
+}
+
+.header {
+    margin-bottom: var(--space-6);
+}
+
+.title {
+    font-size: var(--text-3xl);
+    font-weight: 600;
+    color: var(--color-black);
+    margin-bottom: var(--space-2);
+}
+
+.subtitle {
+    font-size: var(--text-base);
+    color: var(--color-gray-medium);
+}
+
+.tabs {
+    display: flex;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+    border-bottom: 2px solid var(--color-gray-light);
+}
+
+.tab {
+    padding: var(--space-3) var(--space-5);
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: var(--color-gray-dark);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    margin-bottom: -2px;
+}
+
+.tab:hover {
+    color: var(--color-orange);
+}
+
+.tab.tabActive {
+    color: var(--color-orange);
+    border-bottom-color: var(--color-orange);
+}
+
+.assignmentList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.assignmentCard {
+    transition: all var(--transition-base);
+}
+
+.assignmentCard:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.assignmentHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-4);
+}
+
+.courseName {
+    font-size: var(--text-sm);
+    color: var(--color-gray-medium);
+    margin-top: var(--space-1);
+}
+
+.assignmentInfo {
+    display: flex;
+    gap: var(--space-6);
+    margin-bottom: var(--space-4);
+    padding: var(--space-3);
+    background-color: var(--color-peach-light);
+    border-radius: var(--radius-md);
+}
+
+.infoItem {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.infoLabel {
+    font-size: var(--text-xs);
+    color: var(--color-gray-medium);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.infoValue {
+    font-size: var(--text-base);
+    color: var(--color-black);
+    font-weight: 500;
+}
+
+.infoValue.overdue {
+    color: var(--color-error);
+}
+
+.actions {
+    display: flex;
+    gap: var(--space-3);
+    justify-content: flex-end;
+}
+
+.emptyState {
+    text-align: center;
+    color: var(--color-gray-medium);
+    padding: var(--space-8);
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    font-size: var(--text-lg);
+    color: var(--color-gray-medium);
+}

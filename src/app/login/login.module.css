@@ -1,0 +1,131 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.leftPanel {
+    flex: 1;
+    background-color: var(--color-cream);
+}
+
+.rightPanel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+    padding: var(--space-8);
+}
+
+.formContainer {
+    width: 100%;
+    max-width: 450px;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: var(--text-4xl);
+    font-weight: 600;
+    color: var(--color-black);
+    margin-bottom: var(--space-2);
+    text-align: center;
+}
+
+.subtitle {
+    font-size: var(--text-base);
+    color: var(--color-gray-medium);
+    margin-bottom: var(--space-8);
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+.roleSelection {
+    margin-bottom: var(--space-4);
+}
+
+.roleLabel {
+    display: block;
+    margin-bottom: var(--space-3);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-black);
+}
+
+.roleButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+}
+
+.roleBtn {
+    padding: var(--space-4);
+    background-color: var(--color-peach-light);
+    border: 2px solid var(--color-gray-border);
+    border-radius: var(--radius-lg);
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: var(--color-gray-dark);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.roleBtn:hover {
+    background-color: var(--color-peach);
+    border-color: var(--color-orange);
+}
+
+.roleBtn.roleActive {
+    background-color: var(--color-peach);
+    border-color: var(--color-orange);
+    color: var(--color-orange);
+}
+
+.error {
+    padding: var(--space-3);
+    background-color: #FFEBEE;
+    border: 1px solid var(--color-error);
+    border-radius: var(--radius-md);
+    color: var(--color-error);
+    font-size: var(--text-sm);
+    text-align: center;
+}
+
+.submitBtn {
+    width: 100%;
+    margin-top: var(--space-4);
+}
+
+.forgotPassword {
+    text-align: center;
+    font-size: var(--text-sm);
+    color: var(--color-gray-medium);
+}
+
+.forgotPassword a {
+    color: var(--color-orange);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgotPassword a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .leftPanel {
+        display: none;
+    }
+
+    .rightPanel {
+        padding: var(--space-4);
+    }
+}

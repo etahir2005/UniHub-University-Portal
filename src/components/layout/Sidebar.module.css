@@ -1,0 +1,121 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: var(--color-white);
+    border-right: 1px solid var(--color-gray-light);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-6);
+    border-bottom: 1px solid var(--color-gray-light);
+}
+
+.logoIcon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: var(--text-lg);
+}
+
+.logoText {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--color-orange);
+}
+
+.nav {
+    flex: 1;
+    padding: var(--space-4) 0;
+    overflow-y: auto;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-6);
+    color: var(--color-gray-dark);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    border-left: 3px solid transparent;
+}
+
+.navLink:hover {
+    background-color: var(--color-peach-light);
+    color: var(--color-orange);
+}
+
+.navLink.active {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    border-left-color: var(--color-orange-hover);
+}
+
+.icon {
+    font-size: var(--text-lg);
+}
+
+.label {
+    font-size: var(--text-base);
+    font-weight: 500;
+}
+
+.logout {
+    padding: var(--space-4) var(--space-6);
+    border-top: 1px solid var(--color-gray-light);
+}
+
+.logoutBtn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    width: 100%;
+    padding: var(--space-3);
+    background-color: var(--color-peach-light);
+    border: none;
+    border-radius: var(--radius-md);
+    color: var(--color-orange);
+    font-size: var(--text-base);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.logoutBtn:hover {
+    background-color: var(--color-peach);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+    }
+
+    .logoText,
+    .label {
+        display: none;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .navLink {
+        justify-content: center;
+    }
+}

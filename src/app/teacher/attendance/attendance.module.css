@@ -1,0 +1,222 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.loading {
+    text-align: center;
+    padding: var(--space-12);
+    font-size: var(--text-lg);
+    color: var(--color-gray-medium);
+}
+
+.header {
+    margin-bottom: var(--space-8);
+}
+
+.title {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--space-2);
+}
+
+.subtitle {
+    font-size: var(--text-base);
+    color: var(--color-gray-medium);
+}
+
+.errorMessage,
+.successMessage {
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-6);
+    font-weight: 500;
+}
+
+.errorMessage {
+    background: #fee;
+    color: #c00;
+    border: 1px solid #fcc;
+}
+
+.successMessage {
+    background: #efe;
+    color: #060;
+    border: 1px solid #cfc;
+}
+
+.selectionCard {
+    margin-bottom: var(--space-8);
+    padding: var(--space-6);
+}
+
+.selectionGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-6);
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.select {
+    padding: var(--space-3);
+    border: 1px solid var(--color-gray-light);
+    border-radius: var(--radius-md);
+    font-size: var(--text-base);
+    background: white;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+
+.statCard {
+    text-align: center;
+    padding: var(--space-6);
+}
+
+.statValue {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--space-2);
+}
+
+.statLabel {
+    font-size: var(--text-sm);
+    color: var(--color-gray-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.attendanceCard {
+    padding: var(--space-6);
+}
+
+.bulkActions {
+    display: flex;
+    gap: var(--space-3);
+    margin: var(--space-4) 0;
+}
+
+.attendanceList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin: var(--space-4) 0;
+}
+
+.attendanceItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-4);
+    background: var(--color-accent);
+    border-radius: var(--radius-md);
+}
+
+.studentInfo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.studentAvatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: var(--text-base);
+}
+
+.studentName {
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.studentId {
+    font-size: var(--text-sm);
+    color: var(--color-gray-medium);
+}
+
+.attendanceBtn {
+    padding: var(--space-2) var(--space-5);
+    border: 2px solid var(--color-gray-light);
+    background: white;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: var(--text-sm);
+    transition: all 0.2s;
+    min-width: 100px;
+}
+
+.attendanceBtn.present {
+    background: #4caf50;
+    color: white;
+    border-color: #4caf50;
+}
+
+.attendanceBtn.absent {
+    background: #f44336;
+    color: white;
+    border-color: #f44336;
+}
+
+.attendanceBtn:hover {
+    transform: scale(1.05);
+}
+
+.saveSection {
+    margin-top: var(--space-6);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-accent);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.emptyState {
+    text-align: center;
+    padding: var(--space-12);
+    color: var(--color-gray-medium);
+}
+
+@media (max-width: 768px) {
+    .selectionGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .attendanceItem {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-3);
+    }
+
+    .bulkActions {
+        flex-direction: column;
+    }
+}
